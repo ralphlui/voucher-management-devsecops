@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: voucher-management-app
+  name: reactjs-k8s-service
+spec:
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: voucher-management-web

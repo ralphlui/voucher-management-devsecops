@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voucher-management-web
+  namespace: voucher-management-app
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: voucher-management-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: voucher-management-web
+    spec:
+      containers:
+        - name: voucher-management-web
+          image: public.ecr.aws/s6y5a7e8/voucher-web:v14
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
