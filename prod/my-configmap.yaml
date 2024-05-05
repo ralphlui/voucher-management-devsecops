@@ -5,5 +5,5 @@ metadata:
   namespace: voucher-management-app
 data:
   SPRING_PROFILES_ACTIVE: prd
-  BACKEND_URL: https://demo.voucherapp.com:8080
-  FRONTEND_URL: https://demo.voucherapp.com:3000
+  BACKEND_URL: http://demo.voucherapp.com:8080
+  FRONTEND_URL: http://demo.voucherapp.com:3000
